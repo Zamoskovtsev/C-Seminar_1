@@ -1,4 +1,4 @@
-//задача 21
+//задача 21 
  int[] PointA = new int[3] { 0, 0, 0};
  int[] PointB = new int[3] { 0, 0, 0};
  string[] Osi = new string[3] { "по оси Х","по оси Y", "по оси Z"};
