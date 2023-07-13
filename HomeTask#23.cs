@@ -1,4 +1,4 @@
-// Задача 23
+// Задача 23 
 Console.Write($"Введите целое число:  ");
 int Number=Convert.ToInt32(Console.ReadLine());
 int i=0;
