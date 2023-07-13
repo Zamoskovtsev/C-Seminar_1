@@ -1,4 +1,4 @@
-// Задача 19
+// Задача 19 
 Console.Write($"Введите любое целое число:  ");
 int Number1=Convert.ToInt32(Console.ReadLine());
 String StrNum = Convert.ToString(Number1);
