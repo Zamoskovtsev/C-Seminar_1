@@ -1,3 +1,4 @@
+//Задача 4
 Console.Write("Введите первое целое число: ");
 int Number1 = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите второе целое число: ");
