@@ -1,4 +1,4 @@
-//Задача 8
+//Задача 8 
 Console.Write("Введите целое число: ");
 int Number = Convert.ToInt32(Console.ReadLine());
 int ResDel;
