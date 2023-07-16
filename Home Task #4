@@ -1,0 +1,76 @@
+//ДЗ Семинар 4
+using System.Globalization;
+Zadacha1();
+Zadacha2();
+Zadacha3();
+ void Zadacha3()
+  {
+    System.Console.WriteLine("Задача 3 (Массив заданной длины и мин максом на экран)");
+    Console.Write("Введите длину массива:");
+    int Lenght=Convert.ToInt32(Console.ReadLine());
+    Console.Write("Введите максимальное возможное значение элемента масива:");
+    int MaxArray=Convert.ToInt32(Console.ReadLine());
+    Console.Write("Введите минимально возможное значение элемента масива:");
+    int MinArray=Convert.ToInt32(Console.ReadLine());
+    if (MaxArray>MinArray)
+    {
+      int[] SimplArray=new int[Lenght];
+      Random random=new Random();
+       for (int i=0; i<Lenght; i++)
+           {
+               SimplArray[i]=random.Next(MinArray,MaxArray+1);
+           }
+       System.Console.Write("Создан массив со следующими значениями [");
+          for (int i=0; i<Lenght-1; i++)
+           {
+                System.Console.Write($"{SimplArray[i]}, ");
+           }
+       System.Console.Write($"{SimplArray[Lenght-1]}, ");
+       System.Console.Write("]");
+    }
+    else
+    {System.Console.Write("Минимум больше или равен максимуму, попробуйте еще разок");}
+  }
+
+//вызов решения задачи 2.
+void Zadacha2()
+{
+    System.Console.WriteLine("Задача 2 (Поиск суммы цифр введенного числа)");
+    System.Console.Write("Введите число: ");
+    int Number =Convert.ToInt32(Console.ReadLine());
+    int Summ =0;
+    if (Number<0) 
+      {
+        Number=Number*(-1);
+      }
+    int Num1=Number;
+    while (Number>0)
+      {
+          Summ=Summ+Number%10;
+          Number/=10;
+      }
+      Console.WriteLine($"Сумма цифр числа {Num1} навна {Summ}");
+
+}
+//вызов решения задачи 1.
+void Zadacha1()
+{
+System.Console.WriteLine("Задача 1 (Возведение введенного числа в введенную степень)");
+int Chislo =Vvod("Введите число которое хотите возводить в степень: ");
+int Stepen =Vvod("Введите значение степени в которую хотите возвести: ");
+if (Stepen<0)
+  {
+    System.Console.WriteLine("Исходные данные неверны, значение степени долхно быть положительным");
+  }
+  else
+  {
+    System.Console.WriteLine($"Число {Chislo} в степени {Stepen} равно {Math.Pow(Chislo,Stepen)}");
+  }
+//Подпрограмма ввода с клавиатуры числа
+int Vvod(string Soobchenie)
+{
+  System.Console.Write(Soobchenie);
+  string InputNumber=System.Console.ReadLine();
+  return  Convert.ToInt32(InputNumber);
+}
+}
