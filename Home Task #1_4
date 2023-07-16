@@ -1,0 +1,18 @@
+//Задача 1
+int Chislo =Vvod("Введиет число которое хотите возводить в степень: ");
+int Stepen =Vvod("Введите значение степени в которую хотите возвести: ");
+if (Stepen<0)
+  {
+    System.Console.WriteLine("Исходные данные неверны, значение степени долхно быть полозительным");
+  }
+  else
+  {
+    System.Console.WriteLine($"Число {Chislo} в степени {Stepen} равно {Math.Pow(Chislo,Stepen)}");
+  }
+//Подпрограмма ввода с клавиатуры числа
+int Vvod(string Soobchenie)
+{
+  System.Console.Write(Soobchenie);
+  string InputNumber=System.Console.ReadLine();
+  return  Convert.ToInt32(InputNumber);
+}
