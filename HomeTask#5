@@ -1,0 +1,66 @@
+//Дз семинар 5
+using System.Globalization;
+Zadacha34();
+Zadacha36();
+Zadacha38();
+void Zadacha34()
+{
+int [] arr = new int[10];
+Console.Write("[");
+for (int i = 0; i < arr.Length; i++)
+{
+arr[i] = new Random().Next(99,1000);
+Console.Write($"{arr[i]}, ");
+}
+Console.Write("\b\b]");
+Console.Write(" -> ");
+Console.WriteLine("[");
+int Countposit =0;
+for (int i = 0; i < arr.Length ; i++)
+{
+    int Ost=arr[i]%2;
+if (Ost==0){Countposit++;}
+}
+Console.WriteLine($"Четных членов массива - {Countposit}.");
+}
+
+void Zadacha36()
+{
+int [] arr = new int[10];
+Console.Write("[");
+for (int i = 0; i < arr.Length; i++)
+{
+arr[i] = new Random().Next(99,1000);
+Console.Write($"{arr[i]}, ");
+}
+Console.Write("\b\b]");
+Console.Write(" -> ");
+Console.WriteLine("[");
+int SummNegativ =0;
+for (int i = 0; i < arr.Length ; i++)
+{
+    int Ost=i%2;
+if (Ost!=0)
+    {
+        SummNegativ=SummNegativ+arr[i];
+    }
+
+}
+Console.WriteLine($"Сумма нечетных членов массива - {SummNegativ}.");
+}
+
+void Zadacha38()
+{
+double [] arr = new double[10];
+Console.Write("[");
+for (int i = 0; i < arr.Length; i++)
+{
+arr[i] = new Random().Next(99,1000);
+Console.Write($"{arr[i]}, ");
+}
+Console.Write("\b\b]");
+Console.Write(" -> ");
+Console.WriteLine("[");
+double Summ=arr.Max()+arr.Min();
+Console.WriteLine($"Сумма максимально и минимального члена массива - {Summ}.");
+}
