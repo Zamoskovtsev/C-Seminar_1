@@ -1,0 +1,43 @@
+//Дз семинар 6
+
+using System.Globalization;
+Zadacha41();
+Zadacha43();
+//Задача 41: Пользователь вводит с клавиатуры M чисел. Посчитайте, сколько чисел больше 0 ввёл пользователь.
+//0, 7, 8, -2, -2 -> 2
+//1, -7, 567, 89, 223-> 3
+
+void Zadacha41()
+{ 
+    System.Console.WriteLine("Задача 41 (Сколько положительных чисел ввел пользователь)");
+    Console.Write("Сколько чисел хотите ввести:");
+    int Lenght=Convert.ToInt32(Console.ReadLine());
+    int Count=0;
+    for (int i=1; i<=Lenght ; i++)
+        {
+        Console.WriteLine($"Введите целое число номер {i}");
+        int Number=Convert.ToInt32(Console.ReadLine());
+        if (Number>0) {Count=Count+1;}
+        }
+    Console.WriteLine($"Введено {Count} положительных чисел из {Lenght}");
+ }
+
+//Задача 43: Напишите программу, которая найдёт точку пересечения двух прямых, 
+//заданных уравнениями y = k1 * x + b1, y = k2 * x + b2; значения b1, k1, b2 и k2 задаются пользователем.
+//b1 = 2, k1 = 5, b2 = 4, k2 = 9 -> (-0,5; -0,5)
+
+void Zadacha43()
+{
+  System.Console.WriteLine("Задача 41 (координата пересечения двух прямых y=k1*x+b1 и y=k2*x+b2)");
+    Console.Write("Введите параметры первой прямой k1:");
+    double k1=Convert.ToDouble(Console.ReadLine());
+    Console.Write("Введите параметры первой прямой b1:");
+    double b1=Convert.ToDouble(Console.ReadLine());
+    Console.Write("Введите параметры первой прямой k2:");
+    double k2=Convert.ToDouble(Console.ReadLine());
+    Console.Write("Введите параметры первой прямой b2:");
+    double b2=Convert.ToDouble(Console.ReadLine());
+    double x=(b2-b1)/(k1-k2);
+    double y=k1*x+b1;
+    Console.Write($"Координаты пересечения прямых равны X={x}, Y={y}");
+}
