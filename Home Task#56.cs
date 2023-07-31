@@ -42,7 +42,6 @@ if (flag==true)
       Console.WriteLine(arrtemp[i]);
       temp=0;
     }
-int mindex=0;
 for (int i = 0; i < k; i++)
 { 
     if (arrtemp[i] ==arrtemp.Min())
